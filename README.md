@@ -8,7 +8,7 @@ The idea is to first iterate thru all the walls inside of the room. Using the co
 1. Clone this repo
 2. Open Scene "RoomPGTest" under Assets -> PRG MR -> Scene
 3. Look at the inside of the "room"
-![[Pasted image 20240506020028.png]]
+![[Imgs/Pasted image 20240506020028.png]]
 4. Choose the WFC game object, click on Start WFC to generate objects in the room
 ![[Pasted image 20240506020121.png]]
 ![[Pasted image 20240506020146.png]]
