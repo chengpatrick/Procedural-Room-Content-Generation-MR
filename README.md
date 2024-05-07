@@ -22,6 +22,7 @@ The idea is to first iterate thru all the walls inside of the room. Using the co
 ## Setup
 This is the structure for the room, it contains multiple instantiators for the floor, wall, ceiling, etc, which holds the mesh, collider and components for the parts of the room. These are all Photon Instantiator so it can be spawn thru photon engine network and applied in colocation.
 ![Pasted image 20240318022303](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/863c2630-31d1-480d-b305-0129c76d83be)
+
 The is the structure for a general instantiator, the mesh and collider is in the Quad component.
 ![Pasted image 20240318022035](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/42bd7584-8592-4891-bf34-a3b0707f2ea0)
 
@@ -216,4 +217,5 @@ Some basic rules that I defined for this project's setup is stated as below:
 
 ## Other
 The original template of this project is from oculus-samples/Unity-Discover. Everything related to the Procedural Room Generation MR project is under the fold PRG MR.
+
 This is not industry standard level of PCG, but more of a experimental tool. Feel free to play around with it, and reach out if there are any other questions.
