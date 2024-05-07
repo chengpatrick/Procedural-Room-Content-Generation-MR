@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - WRENCH
+  - Bike_Wheel
+  - Bike_Axle
+  - Bike_Seat
+  - Bike_Pedal_L
+  - Bike_Pedal_R
+  - Blocker
+  - Projectile
+  - Monster
+  - PlayerHitbox
+  - Card
+  - Wall
+  - Ceiling
+  - Floor
+  - Scroll
+  - RoomPoint
+  - SP
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Outlined Objects
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - OVRScene
+  - 
+  - 
+  - Player
+  - Guns
+  - 
+  - PowerUps
+  - Smoke
+  - AttackPrefab
+  - Hand
+  - Trigger
+  - Cursor
+  - IgnoredByCursor
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

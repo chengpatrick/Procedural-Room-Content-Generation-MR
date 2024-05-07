@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Discover/Scenes/Examples/SimpleMRScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/Discover/Scenes/Examples/RoomMapping.unity
+    guid: 00822f7707a35c744bec3c3d4a4ed7de
+  - enabled: 0
+    path: Assets/Discover/Scenes/Examples/Colocation.unity
+    guid: 20285efb54166ae44807176a231eb6f0
+  - enabled: 0
+    path: Assets/Discover/Scenes/Discover.unity
+    guid: 0543e87c0093a2c419c1c09ff6873b02
+  - enabled: 0
+    path: Assets/Deckdown/Scene/Menu.unity
+    guid: e6728c1946bd64440969e3a658b82160
+  - enabled: 0
+    path: Assets/Deckdown/Scene/Colocate.unity
+    guid: 1eb5d628066ca90409b557036623a43e
+  - enabled: 0
+    path: Assets/Deckdown/Scene/ColocationGesture.unity
+    guid: c07b35398b48d954f9e7fc46751a20d2
+  - enabled: 0
+    path: Assets/Deckdown/Scene/ColocateInteraction.unity
+    guid: 60cf6156a0b2de0488a8d6b46b9ceb8a
+  - enabled: 0
+    path: Assets/Deckdown/Scene/PointCapture.unity
+    guid: 3a9706526527dd44fa39e764c2aeec54
+  - enabled: 0
+    path: Assets/Deckdown/Scene/DropSoul.unity
+    guid: 18ffcc088998ad446b25caf18eaa4cd9
+  - enabled: 0
+    path: Assets/Deckdown/Scene/Env.unity
+    guid: 73cf283e4634c3f47932d6a6d28c2772
+  - enabled: 0
+    path: Assets/Deckdown/Scene/MonsterSelect.unity
+    guid: e42284b730db03740ac6d7e43b1c0b95
+  - enabled: 0
+    path: Assets/Deckdown/Scene/MonsterCollect.unity
+    guid: 675018311754c5e4190828048962f073
+  - enabled: 0
+    path: Assets/Deckdown/Scene/GrabCollect.unity
+    guid: cb3be5ea06625714d988f31307dbaae4
+  - enabled: 0
+    path: Assets/Deckdown/Scene/GrabMonster.unity
+    guid: 64898e212a0845e42a0dd34dbe72d61e
+  - enabled: 0
+    path: Assets/Deckdown/Scene/HealthMana.unity
+    guid: 975c4b1a736f74d459b0df3a46970062
+  - enabled: 0
+    path: Assets/Deckdown/Scene/GrabMonster 1.unity
+    guid: 4d3d620a45e7d4841a2beb9d2e2e3ff2
+  - enabled: 0
+    path: Assets/Deckdown/Scene/Occlusion.unity
+    guid: 7124006647109094781319399578b1f2
+  - enabled: 0
+    path: Assets/Deckdown/Scene/MonsterFollow.unity
+    guid: 85e47d3445d5ce2498d2b5c67a6d4f44
+  - enabled: 0
+    path: Assets/Deckdown/Scene/Watchingp.unity
+    guid: 4ae78c2c70551c440883d0bb94b3daee
+  - enabled: 0
+    path: Assets/Deckdown/Scene/Healthbar_3_26.unity
+    guid: 88f5133a8af851244b5670939ab97e54
+  - enabled: 1
+    path: Assets/Deckdown/Scene/Tutorial.unity
+    guid: cf02c0a1f804b834f970d53467551d95
+  - enabled: 1
+    path: Assets/Deckdown/Scene/Final.unity
+    guid: 84d6e07d4cc17e34aa587fd7daa1f93f
+  - enabled: 0
+    path: Assets/Deckdown/Scene/Cursor.unity
+    guid: 9cdabbb6dd9814c4086440631c1f58b5
+  - enabled: 0
+    path: Assets/Deckdown/Scene/PGRoom.unity
+    guid: b86d9d172aebd7e428e5048785b4be4c
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 7d7a0e475fae1ad47bb84dbb1aa98284, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c8e364865e9455940bb653a1d5eb56fb, type: 2}
