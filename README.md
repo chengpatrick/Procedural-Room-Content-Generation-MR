@@ -1,3 +1,5 @@
+# Procedural Room Centent Generation MR (PRG MR)
+In this sample project, I will show how to procedural generate/setup virtual objects in an empty room in mixed reality(MR) in a room scanned by Meta Quest 3.
 
 ## Summary
 The purpose of the project is to create a method to do procedural content decor in a mixed reality room setting, for a room that is scanned by Meta Quest 3. This was originally a tool for one of my projects, but in generation it could become a foundation for other that would also want to do PCG in mixed reality.
@@ -204,6 +206,13 @@ After using WFC to generate a 2D grid that has the position of the objects, map 
 
 This works ideally in a empty square or rectangular room. 
 As there are not many PCG related to MR on the web at the moment. I hope this repo and the scripts provided can be helpful.
+
+## Room Setup and Rules
+Some basic rules that I defined for this project's setup is stated as below:
+* Room should be rectangular
+* There should be no objects against the wall
+* There could be pillars/trees at the four corners of the room as decor
+* Objects should not be crowded against each other
 
 ## Other
 The original template of this project is from oculus-samples/Unity-Discover. Everything related to the Procedural Room Generation MR project is under the fold PRG MR.
