@@ -8,17 +8,20 @@ The idea is to first iterate thru all the walls inside of the room. Using the co
 1. Clone this repo
 2. Open Scene "RoomPGTest" under Assets -> PRG MR -> Scene
 3. Look at the inside of the "room"
-![[Imgs/Pasted image 20240506020028.png]]
+![Pasted image 20240506020028](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/56ff1b97-28f2-45b3-8bad-91d20538622c)
+
 4. Choose the WFC game object, click on Start WFC to generate objects in the room
-![[Pasted image 20240506020121.png]]
-![[Pasted image 20240506020146.png]]
-5. To import into your own project, go to files Assets -> PRG MR -> Prefabs -> Generation Prefabs, and move the two objects into your own scene. This could be used in both the editor and AR/VR/MR with a scanned room via Meta Quest.
+![Pasted image 20240506020121](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/6b28f4e4-d5ea-4f25-98d0-65de438a75ae)
+
+![Pasted image 20240506020146](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/bf997126-7ba8-4347-b35f-04cb316f201c)
+
+6. To import into your own project, go to files Assets -> PRG MR -> Prefabs -> Generation Prefabs, and move the two objects into your own scene. This could be used in both the editor and AR/VR/MR with a scanned room via Meta Quest.
 
 ## Setup
 This is the structure for the room, it contains multiple instantiators for the floor, wall, ceiling, etc, which holds the mesh, collider and components for the parts of the room. These are all Photon Instantiator so it can be spawn thru photon engine network and applied in colocation.
-![[Pasted image 20240318022303.png]]
+![Pasted image 20240506020146](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/cd238521-d295-4229-85d3-b5792e589fae)
 The is the structure for a general instantiator, the mesh and collider is in the Quad component.
-![[Pasted image 20240318022035.png]]
+![Pasted image 20240318022035](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/42bd7584-8592-4891-bf34-a3b0707f2ea0)
 
 ## Room Bound
 We first find all wall objects, and use this function to find all vertices of the corners of the wall. Since a wall is just a plane, we can just get the four corners. 
@@ -76,8 +79,7 @@ Now we spawn spheres at the location of the vertices to visualize where the boun
 ```
 
 As we can see from the image, spheres spawn at the corners of the walls.
-![[Pasted image 20240318025637.png]]
-![[Pasted image 20240318025742.png]]
+![Pasted image 20240318025637](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/1358f7de-b461-4c5c-a204-f18b207bb1a8)
 
 Now with the locations of the spheres, we can find the bounding of the room to limit the area to perform the WFC. We iterate through the parent room object to find all the "wall" objects, find the bounds of the walls and store them within the hashset.
 
