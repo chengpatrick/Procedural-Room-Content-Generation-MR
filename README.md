@@ -21,6 +21,7 @@ The idea is to first iterate thru all the walls inside of the room. Using the co
 
 ## Setup
 This is the structure for the room, it contains multiple instantiators for the floor, wall, ceiling, etc, which holds the mesh, collider and components for the parts of the room. These are all Photon Instantiator so it can be spawn thru photon engine network and applied in colocation.
+
 ![Pasted image 20240318022303](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/863c2630-31d1-480d-b305-0129c76d83be)
 
 The is the structure for a general instantiator, the mesh and collider is in the Quad component.
