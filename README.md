@@ -1,6 +1,8 @@
 # Procedural Room Centent Generation MR (PRG MR)
 In this sample project, I will show how to procedural generate/setup virtual objects in an empty room in mixed reality(MR) in a room scanned by Meta Quest 3.
 
+![PRG gif1](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/054ffede-3a42-40d0-9583-903c5fa4346e)
+
 ## Summary
 The purpose of the project is to create a method to do procedural content decor in a mixed reality room setting, for a room that is scanned by Meta Quest 3. This was originally a tool for one of my projects, but in generation it could become a foundation for other that would also want to do PCG in mixed reality.
 
@@ -155,7 +157,7 @@ As in WFC, there's also the term called entropy. As cells type are decided, choi
       4. Collapse all cells
 Since our rules are very simple, the WFC is also very straight forward and simple.
 
-After using WFC to generate a 2D grid that has the position of the objects, map it to the room bound using the minX, maxX, minZ, maxZ positions. Below is a sample of how I mapped the grid to the room bound.
+After using WFC to generate a 2D grid that has the position of the objects, map it to the room bound using the minX, maxX, minZ, maxZ positions. Since the generated room won't always be aligned with the xz-axis, we need to rotate the entire generated grid. Below is a sample of how I mapped the grid to the room bound.
 ```
  private void SpawnMapInRoom()
  {
