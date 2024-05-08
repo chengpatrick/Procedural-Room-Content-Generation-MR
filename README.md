@@ -21,7 +21,7 @@ The idea is to first iterate thru all the walls inside of the room. Using the co
 
 6. To import into your own project, go to files Assets -> PRG MR -> Prefabs -> Generation Prefabs, and move the two objects into your own scene. Use the StartWFC function in WaveFunctionCollapse.cs to start room generation after you have the room object enabled. This could be used in both the editor and AR/VR/MR with a scanned room via Meta Quest.
 
-![PRG gif2](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/2714633f-811e-4141-a3c4-864a919af8ab) 
+![PRG gif2](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/2714633f-811e-4141-a3c4-864a919af8ab)   
 (View in MR)
 
 ## Setup
