@@ -147,12 +147,19 @@ If we decide a cell at (1, 1) is small object, then cell adjacent to it can't ha
 ```
 
 As in WFC, there's also the term called entropy. As cells type are decided, choices of its neighboring cells might decreased. If the cell has more states to choose from, it has a higher entropy; if it has less states to choose from, then it has a lower entropy. We can always pick a state for a cell that has lower entropy, since there are less choices to choose from. When a cell's state is chosen and decided, that's when we call the cell is collapsed. If all cells have the same entropy, which would happen like in the very beginning, we can choose a random cell to start the collapsing process. This is the main idea of WFC.
+
       Alg:
+      
       1. Find random cell to start with, choose random state outside of None
+      
       2. Find cell with lowest entropy(choices), collapse that cell, repeat
+      
       3. If all cell entropy is equal, choose random cell to execute
+      
       4. Collapse all cells
+      
 Since our rules are very simple, the WFC is also very straight forward and simple.
+
 After using WFC to generate a 2D grid that has the position of the objects, map it to the room bound using the minX, maxX, minZ, maxZ positions. Below is a sample of how I mapped the grid to the room bound.
 ```
  private void SpawnMapInRoom()
