@@ -17,7 +17,7 @@ The idea is to first iterate thru all the walls inside of the room. Using the co
 
 ![Pasted image 20240506020146](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/bf997126-7ba8-4347-b35f-04cb316f201c)
 
-6. To import into your own project, go to files Assets -> PRG MR -> Prefabs -> Generation Prefabs, and move the two objects into your own scene. This could be used in both the editor and AR/VR/MR with a scanned room via Meta Quest.
+6. To import into your own project, go to files Assets -> PRG MR -> Prefabs -> Generation Prefabs, and move the two objects into your own scene. Use the StartWFC function in WaveFunctionCollapse.cs to start room generation after you have the room object enabled. This could be used in both the editor and AR/VR/MR with a scanned room via Meta Quest.
 
 ## Setup
 This is the structure for the room, it contains multiple instantiators for the floor, wall, ceiling, etc, which holds the mesh, collider and components for the parts of the room. These are all Photon Instantiator so it can be spawn thru photon engine network and applied in colocation.
