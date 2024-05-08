@@ -124,12 +124,13 @@ Though it's called WFC, it's a very simplified version WFC. I stated there are o
 ```
 The rules above can be redefined based on the needs. I have also made a rule of the number of certain objects that could exist within the generation, which is the total number of available cells times the fill percentage that is defined by the user. In my case, I will fill 30% of the cells up with objects. For example, in a 10x10 grid if all grids are available, 30 grids will be populated with objects.
 
-All cells initially can turn out to be any object, but we can set up neighboring rules so some objects can't be next to each other. Let's say empty cell can be next to any object, but objects can't be next to another object. 
-      Neighbor rules:
-      0 : 1, 2, 3
-      1 : 0
-      2 : 0
-      3 : 0
+All cells initially can turn out to be any object, but we can set up neighboring rules so some objects can't be next to each other. Let's say empty cell can be next to any object, but objects can't be next to another object. Used the enum (number - cell state pair) above to correspond to the neighbor rules below. 
+
+      Neighbor rules:  
+      0 : 1, 2, 3  
+      1 : 0  
+      2 : 0  
+      3 : 0  
   
 If we decide a cell at (1, 1) is small object, then cell adjacent to it can't have any objects. 
 ```
