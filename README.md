@@ -24,7 +24,7 @@ This is the structure for the room, it contains multiple instantiators for the f
 
 ![Pasted image 20240318022303](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/863c2630-31d1-480d-b305-0129c76d83be)
 
-The is the structure for a general instantiator, the mesh and collider is in the Quad component.
+This is the structure for a general instantiator, the mesh and collider is in the Quad component.
 ![Pasted image 20240318022035](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/42bd7584-8592-4891-bf34-a3b0707f2ea0)
 
 ## Room Bound
@@ -90,12 +90,18 @@ Now with the locations of the spheres, we can find the bounding of the room to l
 As we iterate through all the vertices on each wall, we want to keep track of the edge corners of the room, corresponding to minX, maxX, minZ, maxZ. As these bounding values will be used for the WFC in the upcoming steps.
 
 ## Wave Function Collapse
-Though it's called WFC, it's a very simplified version WFC. I state there are only 5 states that could be possible for the grid/room setup.
+Though it's called WFC, it's a very simplified version WFC. I stated there are only 5 states that could be possible for the grid/room setup, and use an Unity enum for it.
+
       0 - Empty cell
+      
       1 - Small object
+      
       2 - Medium object
+      
       3 - Large object
+      
       4 - Corner object of room
+      
   ```
       [Flags]
     private enum WfcMap
