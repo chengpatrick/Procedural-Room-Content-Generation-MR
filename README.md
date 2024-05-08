@@ -1,5 +1,5 @@
-# Procedural Room Centent Generation MR (PRG MR)
-In this sample project, I will show how to procedural generate/setup virtual objects in an empty room in mixed reality(MR) in a room scanned by Meta Quest 3.
+# Procedural Room Content Generation MR (PRG MR)
+In this sample project, I will show how to procedure generate/setup virtual objects in an empty room in mixed reality(MR) in a room scanned by Meta Quest 3.
 
 ![PRG gif1](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/054ffede-3a42-40d0-9583-903c5fa4346e)
 
@@ -24,16 +24,16 @@ The idea is to first iterate thru all the walls inside of the room. Using the co
 ![PRG gif2](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/2714633f-811e-4141-a3c4-864a919af8ab)   
 (View in MR)
 
-7. Modify parameters such as Map Width & Map Height to adjust size of generated map. Modify Fill Percentage, Large/Medium/Small Percentage to adjust amount of certain objects being generated.
+7. Modify parameters such as Map Width & Map Height to adjust the size of the generated map. Modify Fill Percentage, Large/Medium/Small Percentage to adjust the amount of certain objects being generated.
 
 ![PRG gif3](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/49562e0f-ee46-4bdb-b0d5-fb91bdeaa59b)
 
 ## Setup
-This is the structure for the room, it contains multiple instantiators for the floor, wall, ceiling, etc, which holds the mesh, collider and components for the parts of the room. These are all Photon Instantiator so it can be spawn thru photon engine network and applied in colocation.
+This is the structure for the room when scanned by Quest 3, it contains multiple instantiators for the floor, wall, ceiling, etc, which hold the mesh, collider, and components for the parts of the room. These are all Photon Instantiator so they can be spawn thru photon engine network and applied in colocation.
 
 ![Pasted image 20240318022303](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/863c2630-31d1-480d-b305-0129c76d83be)
 
-This is the structure for a general instantiator, the mesh and collider is in the Quad component.
+This is the structure for a general instantiator, the mesh and collider are in the Quad component.
 ![Pasted image 20240318022035](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/42bd7584-8592-4891-bf34-a3b0707f2ea0)
 
 ## Room Bound
@@ -99,7 +99,7 @@ Now with the locations of the spheres, we can find the bounding of the room to l
 As we iterate through all the vertices on each wall, we want to keep track of the edge corners of the room, corresponding to minX, maxX, minZ, maxZ. As these bounding values will be used for the WFC in the upcoming steps.
 
 ## Wave Function Collapse
-Though it's called WFC, it's a very simplified version WFC. I stated there are only 5 states that could be possible for the grid/room setup, and use an Unity enum for it.
+Though it's called WFC, it's a very simplified version WFC. I stated there are only 5 states that could be possible for the grid/room setup, and use a Unity enum for it.
 
       0 - Empty cell
       
@@ -156,7 +156,7 @@ If we decide a cell at (1, 1) is small object(1), then cell adjacent to it can't
     }
 ```
 
-As in WFC, there's also the term called entropy. As cells type are decided, choices of its neighboring cells might decreased. If the cell has more states to choose from, it has a higher entropy; if it has less states to choose from, then it has a lower entropy. We can always pick a state for a cell that has lower entropy, since there are less choices to choose from. When a cell's state is chosen and decided, that's when we call the cell is collapsed. If all cells have the same entropy, which would happen like in the very beginning, we can choose a random cell to start the collapsing process. This is the main idea of WFC.
+As in WFC, there's also the term called entropy. As cell types are decided, choices of its neighboring cells might be decreased. If the cell has more states to choose from, it has a higher entropy; if it has less states to choose from, then it has a lower entropy. We can always pick a state for a cell that has lower entropy, since there are less choices to choose from. When a cell's state is chosen and decided, that's when we call the cell is collapsed. If all cells have the same entropy, which would happen like in the very beginning, we can choose a random cell to start the collapsing process. This is the main idea of WFC.
 
       Alg:
       1. Find random cell to start with, choose random state outside of None      
@@ -224,11 +224,11 @@ After using WFC to generate a 2D grid that has the position of the objects, map 
  }
 ```
 
-This works ideally in a empty square or rectangular room. 
+This works ideally in an empty square or rectangular room. 
 As there are not many PCG related to MR on the web at the moment. I hope this repo and the scripts provided can be helpful.
 
 ## Room Setup and Rules
-Some basic rules that I defined for this project's setup is stated as below:
+Some basic rules that I defined for this project's setup are stated as below:
 * Room should be rectangular
 * There should be no objects against the wall
 * There could be pillars/trees at the four corners of the room as decor
@@ -237,4 +237,4 @@ Some basic rules that I defined for this project's setup is stated as below:
 ## Other
 The original template of this project is from oculus-samples/Unity-Discover. Everything related to the Procedural Room Generation MR project is under the fold PRG MR.
 
-This is not industry standard level of PCG, but more of a experimental tool. Feel free to play around with it, and reach out if there are any other questions.
+This is not an industry-standard level of PCG, but more of an experimental tool. Feel free to play around with it, and reach out if there are any other questions.
