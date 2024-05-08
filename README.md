@@ -92,7 +92,7 @@ As we iterate through all the vertices on each wall, we want to keep track of th
 ## Wave Function Collapse
 Though it's called WFC, it's a very simplified version WFC. I state there are only 5 states that could be possible for the grid/room setup.
       0 - Empty cell
-	  1 - Small object
+      1 - Small object
       2 - Medium object
       3 - Large object
       4 - Corner object of room
