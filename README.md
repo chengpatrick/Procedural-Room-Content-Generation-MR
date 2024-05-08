@@ -24,6 +24,10 @@ The idea is to first iterate thru all the walls inside of the room. Using the co
 ![PRG gif2](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/2714633f-811e-4141-a3c4-864a919af8ab)   
 (View in MR)
 
+7. Modify parameters such as Map Width & Map Height to adjust size of generated map. Modify Fill Percentage, Large/Medium/Small Percentage to adjust amount of certain objects being generated.
+
+![PRG gif3](https://github.com/chengpatrick/Procedural-Room-Content-Generation-MR/assets/57270044/49562e0f-ee46-4bdb-b0d5-fb91bdeaa59b)
+
 ## Setup
 This is the structure for the room, it contains multiple instantiators for the floor, wall, ceiling, etc, which holds the mesh, collider and components for the parts of the room. These are all Photon Instantiator so it can be spawn thru photon engine network and applied in colocation.
 
