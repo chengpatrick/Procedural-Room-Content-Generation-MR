@@ -132,7 +132,7 @@ All cells initially can turn out to be any object, but we can set up neighboring
       2 : 0  
       3 : 0  
   
-If we decide a cell at (1, 1) is small object, then cell adjacent to it can't have any objects. 
+If we decide a cell at (1, 1) is small object(1), then cell adjacent to it can't have any objects. e.g. cell (1, 0) (0, 1) (2, 1) (1, 2) will all be empty(0).
 ```
     // Update cell based on prev cell state rules
     private void UpdateCell(WfcMap prev, int i, int j)
